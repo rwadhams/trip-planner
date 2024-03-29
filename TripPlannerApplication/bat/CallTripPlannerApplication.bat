@@ -10,3 +10,6 @@ call TripPlannerApplication.bat %id%
 echo.
 
 pause
+
+call OneDriveBackup.bat
+pause
