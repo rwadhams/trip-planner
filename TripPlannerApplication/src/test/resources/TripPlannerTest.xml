@@ -1,0 +1,30 @@
+<tripPlanner>
+	<startDate>26/03/2024</startDate>
+	<locationNights>
+		<location>Yarroweyah</location>
+		<nights>19</nights>
+		<campsite>Housesit</campsite>
+		<thingsToDo>Time to relax and catch up</thingsToDo>
+	</locationNights>
+	<!-- thingsToDo empty -->
+	<locationNights>
+		<location>Moama/Echuca</location>
+		<nights>2</nights>
+		<campsite>Rotary Park or Rich River Golf club</campsite>
+		<thingsToDo></thingsToDo>
+	</locationNights>
+	<!-- campsite empty -->
+	<locationNights>
+		<location>Renmark</location>
+		<nights>5</nights>
+		<campsite></campsite>
+		<thingsToDo>Woolshed Brewery</thingsToDo>
+	</locationNights>
+	<!-- both campsite and thingsToDo empty -->
+	<locationNights>
+		<location>Burra</location>
+		<nights>1</nights>
+		<campsite></campsite>
+		<thingsToDo></thingsToDo>
+	</locationNights>
+</tripPlanner>

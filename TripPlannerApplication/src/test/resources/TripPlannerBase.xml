@@ -1,0 +1,15 @@
+<tripPlanner>
+	<startDate>dd/MM/yyyy</startDate>
+	<locationNights>
+		<location></location>
+		<nights></nights>
+		<campsite></campsite>
+		<thingsToDo></thingsToDo>
+	</locationNights>
+	<locationNights>
+		<location></location>
+		<nights></nights>
+		<campsite></campsite>
+		<thingsToDo></thingsToDo>
+	</locationNights>
+</tripPlanner>
