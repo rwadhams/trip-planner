@@ -10,12 +10,12 @@ class TripPlannerTestApp {
 		println 'TripPlannerTestApp started...'
 		println ''
 
-		TripPlannerXMLService xmlSerice = new TripPlannerXMLService()
-		LocalDate startDate = xmlSerice.getStartDate('TripPlannerTest.xml')
+		TripPlannerXMLService xmlService = new TripPlannerXMLService()
+		LocalDate startDate = xmlService.getStartDate('TripPlannerTest.xml')
 		println "startDate...: $startDate"
 		println ''
 		
-		List<LocationNightsDTO> lnList = xmlSerice.buildLocationNightsList('TripPlannerTest.xml')
+		List<LocationNightsDTO> lnList = xmlService.buildLocationNightsList('TripPlannerTest.xml')
 		println 'List of LocationNightsDTOs:'
 		lnList.each {dto ->
 			println "\t$dto"
