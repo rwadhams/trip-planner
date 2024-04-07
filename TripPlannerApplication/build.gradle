@@ -45,6 +45,6 @@ applicationDistribution.from("bat") {
 }
 
 applicationDistribution.from("src/test/resources") {
-	into "$executableDir"
+	into "${executableDir}/data"
 	include "TripPlannerBase.xml"
 }

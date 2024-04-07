@@ -7,7 +7,7 @@ import com.wadhams.trip.planner.dto.LocationNightsDTO
 class TripPlannerXMLService {
 	
 	LocalDate getStartDate(String filename) {
-		def tripPlanner = slurpXMLFile(filename)
+		def tripPlanner = slurpXMLFile("data/$filename")
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern('dd/MM/yyyy')
 		LocalDate startDate = LocalDate.parse(tripPlanner.startDate.text(), dtf)
@@ -18,7 +18,7 @@ class TripPlannerXMLService {
 	List<LocationNightsDTO> buildLocationNightsList(String filename) {
 		List<LocationNightsDTO> locationNightsList = []
 		
-		def tripPlanner = slurpXMLFile(filename)
+		def tripPlanner = slurpXMLFile("data/$filename")
 		def lnList = tripPlanner.locationNights
 
 		lnList.each {ln ->

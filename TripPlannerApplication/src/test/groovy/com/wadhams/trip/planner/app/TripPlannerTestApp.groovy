@@ -22,10 +22,10 @@ class TripPlannerTestApp {
 		}
 		println ''
 		
-		PrintWriter pw = new PrintWriter(System.out, true)
-		TripPlannerReportService reportService = new TripPlannerReportService()
-		reportService.report(startDate, lnList, pw)
-		println ''
+//		PrintWriter pw = new PrintWriter(System.out, true)
+//		TripPlannerReportService reportService = new TripPlannerReportService()
+//		reportService.report(startDate, lnList, pw)
+//		println ''
 		
 		println 'TripPlannerTestApp ended.'
 	}
