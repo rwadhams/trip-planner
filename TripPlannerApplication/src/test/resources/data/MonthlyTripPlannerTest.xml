@@ -1,0 +1,53 @@
+<tripPlanner>
+	<startYearMonth>2024-03</startYearMonth>
+	<locationMonths>
+		<location>Western Australia Trip</location>
+		<months>9</months>
+	</locationMonths>
+	<locationMonths>
+		<location>Tasmania</location>
+		<months>3</months>
+	</locationMonths>
+	<locationMonths>
+		<location>New Zealand</location>
+		<months>13</months>
+	</locationMonths>
+	<locationMonths>
+		<location>Australia by Camp Trailer</location>
+		<months>6</months>
+	</locationMonths>
+	<locationMonths>
+		<location>Japan, Korea, China</location>
+		<months>2</months>
+	</locationMonths>
+	<locationMonths>
+		<location>Tasmania</location>
+		<months>3</months>
+	</locationMonths>
+	<locationMonths>
+		<location>Europe</location>
+		<months>3</months>
+	</locationMonths>
+	<locationMonths>
+		<location>UK</location>
+		<months>3</months>
+	</locationMonths>
+	<locationMonths>
+		<location>Europe</location>
+		<months>3</months>
+	</locationMonths>
+	<locationMonths>
+		<location>UK</location>
+		<months>3</months>
+	</locationMonths>
+	<locationMonths>
+		<location>USA</location>
+		<months>6</months>
+	</locationMonths>
+	<!-- 
+	<locationMonths>
+		<location></location>
+		<months></months>
+	</locationMonths>
+	-->
+</tripPlanner>

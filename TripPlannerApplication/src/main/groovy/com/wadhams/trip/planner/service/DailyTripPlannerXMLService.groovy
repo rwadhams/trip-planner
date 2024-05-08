@@ -4,7 +4,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import com.wadhams.trip.planner.dto.LocationNightsDTO
 
-class TripPlannerXMLService {
+class DailyTripPlannerXMLService {
 	
 	LocalDate getStartDate(String filename) {
 		def tripPlanner = slurpXMLFile("data/$filename")

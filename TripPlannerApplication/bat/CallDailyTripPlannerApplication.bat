@@ -1,11 +1,11 @@
 @echo off
-echo Please enter a Trip Planner file number suffix below...
+echo Please enter a Daily Trip Planner file number suffix below...
 echo.
 set /p id=Enter File Number: 
 
 echo.
 
-call TripPlannerApplication.bat %id%
+call TripPlannerApplication.bat daily %id%
 
 echo.
 

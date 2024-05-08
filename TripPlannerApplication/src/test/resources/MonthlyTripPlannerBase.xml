@@ -1,0 +1,11 @@
+<tripPlanner>
+	<startYearMonth>yyyy-MM</startYearMonth>
+	<locationMonths>
+		<location></location>
+		<months></months>
+	</locationMonths>
+	<locationMonths>
+		<location></location>
+		<months></months>
+	</locationMonths>
+</tripPlanner>

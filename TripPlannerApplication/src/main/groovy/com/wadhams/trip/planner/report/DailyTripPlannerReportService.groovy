@@ -4,13 +4,13 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import com.wadhams.trip.planner.dto.LocationNightsDTO
 
-class TripPlannerReportService {
+class DailyTripPlannerReportService {
 	def report(LocalDate startingDate, List<LocationNightsDTO> lnList) {
-		File f = new File("out/trip-planning-report.txt")
+		File f = new File("out/daily-trip-planning-report.txt")
 		
 		f.withPrintWriter {pw ->
-			pw.println 'TRIP PLANNING REPORT'
-			pw.println '--------------------'
+			pw.println 'DAILY TRIP PLANNING REPORT'
+			pw.println '--------------------------'
 	
 			report(startingDate, lnList, pw)
 		}

@@ -9,15 +9,16 @@ Pre-execution
 -------------
 Edit and create Trip Planning files in the \bin directory.
 
-A sample file is provided in \bin directory called TripPlannerBase.xml
+Sample files are provided in \bin directory called DailyTripPlannerBase.xml and MonthlyTripPlannerBase.xml
 
 File naming is strict.
-Follow this pattern, TripPlanner<nn>.xml where <nn> are numbers ranging from 00 to 99.
+Follow this pattern, DailyTripPlanner<nn>.xml where <nn> are numbers ranging from 00 to 99.
+Follow this pattern, MonthlyTripPlanner<nn>.xml where <nn> are numbers ranging from 00 to 99.
 
 
 Execution
 ---------
-Run CallTripPlannerApplication
+Run CallDailyTripPlannerApplication or CallMonthlyTripPlannerApplication
 You will be prompted for the file number. Again, 00 to 99.
 
 The report will be available in the \out directory.
