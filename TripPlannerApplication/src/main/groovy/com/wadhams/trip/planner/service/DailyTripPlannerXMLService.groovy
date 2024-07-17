@@ -35,7 +35,14 @@ class DailyTripPlannerXMLService {
 			String campsite = ln.campsite
 			String thingsToDo = ln.thingsToDo
 			
-			return new LocationNightsDTO(location : "$location", nights : Integer.parseInt(nights), campsite : "$campsite", thingsToDo : "$thingsToDo")
+			//nextDistance is an optional integer
+			String nextDistanceInput = ln.nextDistance
+			int nextDistance = 0	//default
+			if (nextDistanceInput) {
+				nextDistance = Integer.parseInt(nextDistanceInput)
+			} 
+			
+			return new LocationNightsDTO(location : "$location", nights : Integer.parseInt(nights), campsite : "$campsite", thingsToDo : "$thingsToDo", nextDistance : nextDistance)
 	}
 	
 	def slurpXMLFile(String filename) {

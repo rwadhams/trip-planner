@@ -29,6 +29,10 @@ class DailyTripPlannerReportService {
 				firstLine = false
 				reportDate = reportDate.next()
 			}
+			if (ln.nextDistance > 0) {
+				pw.println ''
+				pw.println "${ln.nextDistance} Kms"
+			}
 			pw.println ''
 		}
 	}

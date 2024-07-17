@@ -5,6 +5,7 @@
 		<nights>19</nights>
 		<campsite>Housesit</campsite>
 		<thingsToDo>Time to relax and catch up</thingsToDo>
+		<nextDistance>56</nextDistance>
 	</locationNights>
 	<!-- thingsToDo empty -->
 	<locationNights>

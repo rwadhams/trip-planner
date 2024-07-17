@@ -8,4 +8,5 @@ class LocationNightsDTO {
 	int nights
 	String campsite
 	String thingsToDo
+	int nextDistance
 }

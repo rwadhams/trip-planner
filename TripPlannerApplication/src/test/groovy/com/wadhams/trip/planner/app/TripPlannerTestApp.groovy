@@ -17,10 +17,10 @@ class TripPlannerTestApp {
 		TripPlannerTestApp app = new TripPlannerTestApp()
 		
 		//Daily
-		//app.testDaily()
+		app.testDaily()
 		
 		//Monthly
-		app.testMonthly()
+		//app.testMonthly()
 		
 		println 'TripPlannerTestApp ended.'
 	}
