@@ -5,8 +5,8 @@ import java.time.format.DateTimeFormatter
 import com.wadhams.trip.planner.dto.LocationNightsDTO
 
 class DailyTripPlannerReportService {
-	def report(LocalDate startingDate, List<LocationNightsDTO> lnList) {
-		File f = new File("out/daily-trip-planning-report.txt")
+	def report(LocalDate startingDate, List<LocationNightsDTO> lnList, String filenameSuffix) {
+		File f = new File("out/daily-trip-planning-report-${filenameSuffix}.txt")
 		
 		f.withPrintWriter {pw ->
 			pw.println 'DAILY TRIP PLANNING REPORT'
@@ -23,6 +23,7 @@ class DailyTripPlannerReportService {
 		indent.times {nextDistanceIndent += ' '}
 		
 		LocalDate reportDate = startingDate
+		BigDecimal totalKms = new BigDecimal(0.0)
 		lnList.each {ln ->
 			//println ln
 			boolean firstLine = true
@@ -36,8 +37,10 @@ class DailyTripPlannerReportService {
 			if (ln.nextDistance > 0) {
 				pw.println ''
 				pw.println "$nextDistanceIndent${ln.nextDistance} Kms"
+				totalKms = totalKms.add(ln.nextDistance)
 			}
 			pw.println ''
 		}
+		pw.println "Total distance travelled...: $totalKms Kms"
 	}
 }

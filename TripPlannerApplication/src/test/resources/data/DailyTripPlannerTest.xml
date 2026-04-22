@@ -1,5 +1,12 @@
 <tripPlanner>
-	<startDate>26/03/2024</startDate>
+	<startDate>24/03/2024</startDate>
+	<locationNights>
+		<location>Rutherglen</location>
+		<nights>2</nights>
+		<campsite>???</campsite>
+		<thingsToDo>WineTasting</thingsToDo>
+		<nextDistance>90</nextDistance>
+	</locationNights>
 	<locationNights>
 		<location>Yarroweyah</location>
 		<nights>19</nights>

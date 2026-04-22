@@ -27,16 +27,12 @@ class TripPlannerApp {
 				println ''
 			}
 			else if (mode == Mode.Daily) {
-				String filename = "DailyTripPlanner${args[1]}.xml"
-				println "\tFilename: $filename"
-				println ''
-				app.executeDaily(filename)
+				String filenameSuffix = args[1]
+				app.executeDaily(filenameSuffix)
 			}
 			else if (mode == Mode.Monthly) {
-				String filename = "MonthlyTripPlanner${args[1]}.xml"
-				println "\tFilename: $filename"
-				println ''
-				app.executeMonthly(filename)
+				String filenameSuffix = args[1]
+				app.executeMonthly(filenameSuffix)
 			}
 			else {
 				println "ERROR: Should never happen."
@@ -59,25 +55,33 @@ class TripPlannerApp {
 		println 'TripPlannerApp ended.'
 	}
 	
-	def executeDaily(String filename) {
+	def executeDaily(String filenameSuffix) {
+		String filename = "DailyTripPlanner${filenameSuffix}.xml"
+		println "\tFilename: $filename"
+		println ''
+		
 		DailyTripPlannerXMLService xmlService = new DailyTripPlannerXMLService()
 		LocalDate startDate = xmlService.getStartDate(filename)
 		List<LocationNightsDTO> lnList = xmlService.buildLocationNightsList(filename)
 
 		DailyTripPlannerReportService reportService = new DailyTripPlannerReportService()
-		reportService.report(startDate, lnList)
+		reportService.report(startDate, lnList, filenameSuffix)
 		
 		println '\tDaily Trip Planning report can be found in the \'out\' folder.'
 		println ''
 	}
 	
-	def executeMonthly(String filename) {
+	def executeMonthly(String filenameSuffix) {
+		String filename = "MonthlyTripPlanner${filenameSuffix}.xml"
+		println "\tFilename: $filename"
+		println ''
+				
 		MonthlyTripPlannerXMLService xmlService = new MonthlyTripPlannerXMLService()
 		YearMonth startYearMonth = xmlService.getStartYearMonth(filename)
 		List<LocationMonthsDTO> lmList = xmlService.buildLocationMonthsList(filename)
 		
 		MonthlyTripPlannerReportService reportService = new MonthlyTripPlannerReportService()
-		reportService.report(startYearMonth, lmList)
+		reportService.report(startYearMonth, lmList, filenameSuffix)
 		
 		println '\tMonthly Trip Planning report can be found in the \'out\' folder.'
 		println ''

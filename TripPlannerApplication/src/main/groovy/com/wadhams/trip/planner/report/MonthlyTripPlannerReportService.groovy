@@ -6,8 +6,8 @@ import com.wadhams.trip.planner.dto.LocationMonthsDTO
 import com.wadhams.trip.planner.dto.LocationNightsDTO
 
 class MonthlyTripPlannerReportService {
-	def report(YearMonth startYearMonth, List<LocationMonthsDTO> lmList) {
-		File f = new File("out/monthly-trip-planning-report.txt")
+	def report(YearMonth startYearMonth, List<LocationMonthsDTO> lmList, String filenameSuffix) {
+		File f = new File("out/monthly-trip-planning-report-${filenameSuffix}.txt")
 		
 		f.withPrintWriter {pw ->
 			pw.println 'MONTHLY TRIP PLANNING REPORT'
@@ -29,6 +29,11 @@ class MonthlyTripPlannerReportService {
 				pw.println "${dtf.format(reportMonth)}\t${lm.location}${(firstLine) ? firstText : ''}"
 				firstLine = false
 				reportMonth = reportMonth.plusMonths(1L)
+			}
+			String commentText = "Comments:\t"
+			lm.comments.each {comment ->
+				pw.println "$commentText$comment"
+				commentText = "         \t"
 			}
 			pw.println ''
 		}

@@ -6,4 +6,5 @@ import groovy.transform.ToString
 class LocationMonthsDTO {
 	String location
 	int months
+	List<String> comments
 }

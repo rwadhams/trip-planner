@@ -33,8 +33,15 @@ class MonthlyTripPlannerXMLService {
 	LocationMonthsDTO build(lm) {
 			String location = lm.location
 			String months = lm.months
+			List<String> comments = []
+			def xmlComments = lm.comment
+			if (xmlComments) {
+				xmlComments.each {c ->
+					comments << c
+				}
+			}
 			
-			return new LocationMonthsDTO(location : "$location", months : Integer.parseInt(months))
+			return new LocationMonthsDTO(location : "$location", months : Integer.parseInt(months), comments : comments)
 	}
 	
 	def slurpXMLFile(String filename) {

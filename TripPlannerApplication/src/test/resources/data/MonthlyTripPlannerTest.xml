@@ -3,6 +3,8 @@
 	<locationMonths>
 		<location>Western Australia Trip</location>
 		<months>9</months>
+		<comment>comment one</comment>
+		<comment>comment two</comment>
 	</locationMonths>
 	<locationMonths>
 		<location>Tasmania</location>
